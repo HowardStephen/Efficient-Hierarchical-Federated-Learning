@@ -1,0 +1,18 @@
+# Conda environment (CPU-only)
+# Usage: conda env create -f environment-cpu.yml && conda activate ehfl_env
+
+name: ehfl_env
+
+channels:
+  - pytorch
+  - conda-forge
+  - defaults
+
+dependencies:
+  - python=3.9
+  - pytorch>=2.0
+  - torchvision
+  - cpuonly
+  - numpy>=2.0
+  - matplotlib>=3.9
+  - pyyaml>=6.0

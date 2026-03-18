@@ -1,0 +1,20 @@
+# Conda environment (GPU, CUDA 11.8)
+# Usage: conda env create -f environment.yml && conda activate ehfl_env
+
+name: ehfl_env
+
+channels:
+  - pytorch
+  - nvidia
+  - conda-forge
+  - defaults
+
+dependencies:
+  - python=3.9
+  - pip
+  - pyyaml>=6.0
+  - pip:
+    - torch==2.7.1+cu118
+    - torchvision==0.22.1+cu118
+    - numpy>=2.0
+    - matplotlib>=3.9

@@ -1,0 +1,15 @@
+# Pip fallback (use conda environment.yml when possible)
+# Install: pip install -r requirements.txt
+
+# Core: PyTorch
+torch>=2.0
+torchvision>=0.15
+
+# Data & numerics
+numpy>=1.21
+
+# Visualization
+matplotlib>=3.5
+
+# Optional: YAML config
+pyyaml>=6.0
