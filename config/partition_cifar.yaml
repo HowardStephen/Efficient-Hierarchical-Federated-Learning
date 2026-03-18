@@ -1,0 +1,18 @@
+# @PATH: config/partition_cifar.yaml
+# @DATE: 03.18.2026
+# @AUTHOR: Howard
+# @E-MAIL: QSX20251439@student.fjnu.edu.cn
+#
+# Configuration for CIFAR Dirichlet Non-IID partitioning.
+# Lower alpha = more heterogeneous (client-skewed); higher alpha = more IID-like.
+
+num_clients: 100
+seed: 42
+
+# Dirichlet alphas to generate (one partition per alpha)
+cifar10_alphas: [0.1, 0.5, 1.0]
+cifar100_alphas: [0.1, 0.5]
+
+# Set to true to partition only one dataset
+cifar10_only: false
+cifar100_only: false
