@@ -88,3 +88,9 @@ Raw data is stored in `data/raw/`; processed/partitioned data in `data/processed
 **FEMNIST** — Natural partition by writer:
 - One client per writer (no synthetic partitioning).
 - Output: `data/processed/femnist_clients/` with `all_data`, `train`, `test` splits.
+
+---
+
+## License
+
+MIT License. See [LICENSE](LICENSE).
