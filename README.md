@@ -1,4 +1,39 @@
+<!--
+@PATH: README.md
+@DATE: 03.17.2026
+@AUTHOR: Howard
+@E-MAIL: QSX20251439@student.fjnu.edu.cn
+
+Project root README. Overview, fl_system, experimental setup, data.
+-->
+
 # Efficient-Hierarchical-Federated-Learning
+
+A three-tier hierarchical federated learning system (Client → Edge Server → Cloud) for improved convergence under system heterogeneity and non-IID data.
+
+---
+
+## fl_system
+
+The core federated learning framework lives in [`fl_system/`](fl_system/). It implements:
+
+| Component | Description |
+|-----------|-------------|
+| **Core algorithm** | fafa_r (Fast Adaptive Federated Aggregation with Reputation) |
+| **Baselines** | FedAvg, Hierarchical FedAvg, FedProx, SCAFFOLD |
+| **Architecture** | Client, Edge Server, Cloud (Parameter Server) |
+| **Datasets** | CIFAR-10, CIFAR-100, FEMNIST |
+
+**Quick start:**
+```bash
+./run.sh                                    # Create env + prepare data
+conda activate ehfl_env
+python fl_system/main.py --config config/experiment.yaml --algorithm fafa_r
+```
+
+See [fl_system/README.md](fl_system/README.md) for full documentation (architecture, configuration, ablation study, etc.).
+
+---
 
 ## Experimental Setup
 
@@ -25,6 +60,8 @@ Alternatively, run `./run.sh` to create the environment and prepare data in one 
 ---
 
 ### Data
+
+The [`data/`](data/) directory is gitignored (no data in repo). Run `./run.sh` or `scripts/download_and_partition.sh` to populate it. See [data/README.md](data/README.md) for details.
 
 #### Data Sources
 
